@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluation des Versets Coraniques</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt.png');
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid #4CAF50;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-family: 'Georgia', serif;
+            font-size: 24px; /* Normal-sized heading */
+        }
+        .verse {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            background-color: rgba(75, 192, 192, 0.2);
+            font-size: 16px; /* Normal-sized text */
+        }
+        .rating {
+            margin-top: 10px;
+        }
+        input[type="number"] {
+            width: 80px;
+            padding: 10px;
+            font-size: 16px; /* Normal-sized input field */
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px; /* Normal-sized button */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #myChart {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Évaluez votre Utilisation des Versets Coraniques</h1>
+
+    <label for="date">Date :</label>
+    <input type="date" id="date" value="" disabled>
+
+    <div class="verse">
+        <p>إن الصلاة كانت على المومنين كتابا موقوتا</p>
+        <div class="rating">
+            <label for="rating1">Évaluation :</label>
+            <input type="number" id="rating1" min="1" max="5" placeholder="1-5">
+        </div>
+    </div>
+
+    <div class="verse">
+        <p>فاقرأوا ما تيسر من القرآن</p>
+        <div class="rating">
+            <label for="rating2">Évaluation :</label>
+            <input type="number" id="rating2" min="1" max="5" placeholder="1-5">
+        </div>
+    </div>
+
+    <div class="verse">
+        <p>استغفروا ربكم إنه كان غفاراً</p>
+        <div class="rating">
+            <label for="rating3">Évaluation :</label>
+            <input type="number" id="rating3" min="1" max="5" placeholder="1-5">
+        </div>
+    </div>
+
+    <div class="verse">
+        <p>وَالَّذِينَ يَصِلُونَ مَا أَمَرَ اللهُ بِهِ أَن يُوصَلَ</p>
+        <div class="rating">
+            <label for="rating4">Évaluation :</label>
+            <input type="number" id="rating4" min="1" max="5" placeholder="1-5">
+        </div>
+    </div>
+
+    <div class="verse">
+        <p>وَوَصَّيْنَا الْإِنْسَانَ بِوَالِدَيْهِ إحسانا</p>
+        <div class="rating">
+            <label for="rating5">Évaluation :</label>
+            <input type="number" id="rating5" min="1" max="5" placeholder="1-5">
+        </div>
+    </div>
+
+    <div class="verse">
+        <p>من ذا الذي يقرض الله قرضا حسنا</p>
+        <div class="rating">
+            <label for="rating6">Évaluation :</label>
+            <input type="number" id="rating6" min="1" max="5" placeholder="1-5">
+        </div>
+    </div>
+
+    <div class="verse">
+        <p>وأن تصوموا خير لكم إن كنتم تعلمون</p>
+        <div class="rating">
+            <label for="rating7">Évaluation :</label>
+            <input type="number" id="rating7" min="1" max="5" placeholder="1-5">
+        </div>
+    </div>
+
+    <button id="submitBtn" onclick="submitRatings()">Soumettre les Évaluations</button>
+
+    <!-- Canvas for Chart -->
+    <canvas id="myChart" width="400" height="200"></canvas>
+</div>
+
+<script src="css.js"></script>
+
+</body>
+</html>

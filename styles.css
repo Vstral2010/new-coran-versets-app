@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt.png');
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    max-width: 90%; /* Reduced max-width for mobile */
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #4CAF50;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-family: 'Georgia', serif;
+    font-size: 1.5em; /* Reduced font size for smaller screens */
+}
+
+.verse {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background-color: rgba(75, 192, 192, 0.2);
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+input[type="number"] {
+    width: 50px; /* Smaller width for input fields */
+    padding: 5px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px; /* Slightly increased padding for better touch interaction */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#myChart {
+    margin-top: 20px;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.3em; /* Smaller header for mobile screens */
+    }
+
+    .container {
+        padding: 15px; /* Reduced padding for mobile */
+    }
+
+    .verse p {
+        font-size: 0.9em; /* Smaller text size for verses */
+    }
+
+    input[type="number"] {
+        width: 40px; /* Smaller width for input fields on mobile */
+    }
+}
+#myChart {
+    margin-top: 20px;
+    max-width: 100%; /* Ensure the chart does not overflow */
+    height: 250px; /* Set a default height for better display on mobile */
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 600px) {
+    #myChart {
+        height: 200px; /* Reduce the height of the chart on mobile devices */
+    }
+}
